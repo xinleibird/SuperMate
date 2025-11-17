@@ -29,7 +29,9 @@ function SM.UnitCastEvent(arg1, arg2, arg3, arg4, arg5)
 
 	if target_guid == arg2 then
 		if arg3 == "START" or arg3 == "CHANNEL" then
-			--DEFAULT_CHAT_FRAME:AddMessage("cast state:"..tostring(arg3).." -spellID:"..tostring(arg4).." -dura:"..tostring(arg5))
+			DEFAULT_CHAT_FRAME:AddMessage(
+				"cast state:" .. tostring(arg3) .. " -spellID:" .. tostring(arg4) .. " -dura:" .. tostring(arg5)
+			)
 			SM.spellID = arg4
 			SM.dura = arg5
 			SM.targetID = arg2
